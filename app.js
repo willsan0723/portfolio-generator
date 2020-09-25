@@ -134,13 +134,12 @@ const promptProject = portfolioData => {
  promptUser()
     .then(promptProject)
     .then(portfolioData => {
-        const pageHTML = generatePage(portfolioData);
-        
-        // fs.writeFile('./index.html', pageHTML, err => {  
-        //     if (err) throw err;
+        const pageHTML = generatePage(portfolioData);        
+        fs.writeFile('./index.html', pageHTML, err => {  
+            if (err) throw err;
 
-        // console.log('Page created! Check out index.html in this directory to see it!');
-        // })
+        console.log('Page created! Check out index.html in this directory to see it!');
+        })
     });
 
  
